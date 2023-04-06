@@ -15,7 +15,7 @@ def solution(p: float, x: np.array) -> tuple:
     Y = np.max(x)
     X_mean = np.mean(x)
     left = (2 * X_mean - Y + 0.13 - (0.065 * alpha)) / alpha
-    right = (2 * X_mean - Y + 0.13) / (alpha - 1)
+    right = (2 * X_mean - Y + 0.13) / (1 - alpha)
 
     return left, \
            right 
