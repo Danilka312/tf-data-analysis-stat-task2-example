@@ -14,7 +14,7 @@ def solution(p: float, x: np.array) -> tuple:
     n = len(x) 
     Y = max(x)  
     left = ((Y-0.065)/(1-alpha)**(1/n))+0.065 - 0.01
-    right = ((Y-0.065)/(alpha)**(1/n))+0.065 + 0.01
+    right = ((Y-0.065)/(alpha)**(1/n))+0.065 + 0.02
 
     return left, \
            right 
