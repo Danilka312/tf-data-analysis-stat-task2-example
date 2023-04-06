@@ -11,11 +11,9 @@ def solution(p: float, x: np.array) -> tuple:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     alpha = 1 - p 
-    semians = 0 
-    for i in range(len(x)): 
-      semians += x[i] 
-    left = (semians - 0.065*len(x))/(len(x)*(alpha)) + 0.065
-    right = (semians - 0.065*len(x))/(len(x)*(1-alpha)) + 0.065
+    Y = max(x)  
+    left = ((Y - 0.065)/(alpha) + 0.065)**(1/n)
+    right = ((Y - 0.065)/(alpha-1) + 0.065)**(1/n)
 
     return left, \
            right 
