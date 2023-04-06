@@ -9,13 +9,12 @@ chat_id = 1119068275 # Ваш chat ID, не меняйте название пе
 def solution(p: float, x: np.array) -> tuple:
     # Измените код этой функции
     # Это будет вашим решением
-    # Не меняйте название функции и её аргументы
+    # Не меняйте название функции и её аргумент
     alpha = 1 - p
     n = len(x) 
-    Y = np.max(x)
-    X_mean = np.mean(x)
-    left = (2 * X_mean - Y + 0.13 - (0.065 * alpha)) / alpha
-    right = (2 * X_mean - Y + 0.13) / (1 - alpha)
+    Y = max(x)  
+    left = ((Y-0.065)/(1-alpha)**(1/n))+0.065
+    right = ((Y-0.065)/(alpha)**(1/n))+0.065
 
     return left, \
            right 
